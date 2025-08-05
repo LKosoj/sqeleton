@@ -37,6 +37,7 @@ trino = {version=">=0.314.0", optional=true}
 presto-python-client = {version="*", optional=true}
 clickhouse-driver = {version="*", optional=true}
 duckdb = {version=">=0.7.0", optional=true}
+impyla = {version=">=0.17.0", optional=true}
 textual = {version=">=0.9.1", optional=true}
 textual-select = {version="*", optional=true}
 pygments = {version=">=2.13.0", optional=true}
@@ -56,6 +57,7 @@ trino = ">=0.314.0"
 presto-python-client = "*"
 clickhouse-driver = "*"
 vertica-python = "*"
+impala = "*"
 
 [tool.poetry.extras]
 mysql = ["mysql-connector-python"]
@@ -68,6 +70,7 @@ trino = ["trino"]
 clickhouse = ["clickhouse-driver"]
 vertica = ["vertica-python"]
 duckdb = ["duckdb"]
+impala = ["impyla"]
 tui = ["textual", "textual-select", "pygments", "prompt-toolkit"]
 
 [build-system]
