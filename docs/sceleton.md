@@ -1,48 +1,48 @@
-# Tutorial: sqeleton
+# Учебник: sqeleton
 
-Sqeleton is a Python library designed to simplify interaction with various SQL databases. It provides a **unified connection interface** to talk to different database systems, abstracting away low-level details. Developers can build complex SQL queries programmatically using a **structured query builder**, which then gets automatically translated into the correct SQL syntax for the specific database being used, ensuring *database-agnostic query generation*.
+Sqeleton — это библиотека Python, предназначенная для упрощения взаимодействия с различными SQL-базами данных. Она обеспечивает **единый интерфейс подключения** для работы с разными системами баз данных, скрывая низкоуровневые детали. Разработчики могут программировать сложные SQL-запросы с помощью **структурированного конструктора запросов**, который затем автоматически преобразуется в правильный синтаксис SQL для используемой базы данных, обеспечивая *генерацию запросов, независимую от базы данных*.
 
 
-## Visual Overview
+## Визуальный обзор
 
 ```mermaid
 flowchart TD
-    A0["Database Connection
+    A0["Подключение к базе данных
 "]
-    A1["SQL Query Builder (AST)
+    A1["Конструктор SQL-запросов (AST)
 "]
-    A2["SQL Dialect
+    A2["Диалект SQL
 "]
-    A3["SQL Compiler
+    A3["Компилятор SQL
 "]
-    A4["Database Types and Schema
+    A4["Типы баз данных и схема
 "]
-    A5["Dialect Mixins
+    A5["Миксины диалекта
 "]
-    A0 -- "Executes queries from" --> A1
-    A0 -- "Uses" --> A2
-    A0 -- "Initializes" --> A3
-    A0 -- "Processes schema with" --> A4
-    A0 -- "Loads extensions from" --> A5
-    A1 -- "Is compiled by" --> A3
-    A2 -- "Defines types" --> A4
-    A2 -- "Extends with" --> A5
-    A3 -- "Consults" --> A2
-    A3 -- "Interprets types with" --> A4
-    A5 -- "Provides features to" --> A2
+    A0 -- "Выполняет запросы из" --> A1
+    A0 -- "Использует" --> A2
+    A0 -- "Инициализирует" --> A3
+    A0 -- "Обрабатывает схему с" --> A4
+    A0 -- "Загружает расширения из" --> A5
+    A1 -- "Компилируется" --> A3
+    A2 -- "Определяет типы" --> A4
+    A2 -- "Расширяется с помощью" --> A5
+    A3 -- "Консультируется с" --> A2
+    A3 -- "Интерпретирует типы с помощью" --> A4
+    A5 -- "Обеспечивает функции для" --> A2
 ```
 
-## Chapters
+## Разделы
 
-1. [Database Connection
+1. [Подключение к базе данных
 ](01_database_connection_.md)
-2. [SQL Query Builder (AST)
+2. [Конструктор SQL-запросов (AST)
 ](02_sql_query_builder__ast__.md)
-3. [SQL Dialect
+3. [Диалект SQL
 ](03_sql_dialect_.md)
-4. [Database Types and Schema
+4. [Типы баз данных и схема
 ](04_database_types_and_schema_.md)
-5. [SQL Compiler
+5. [Компилятор SQL
 ](05_sql_compiler_.md)
-6. [Dialect Mixins
+6. [Миксины диалекта
 ](06_dialect_mixins_.md)
